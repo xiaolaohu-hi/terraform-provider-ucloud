@@ -37,6 +37,17 @@
         "website/docs/r/label*"
       ]
     },
+    "mysql": {
+      "github_users": [
+        "Episkey-G"
+      ],
+      "paths": [
+        "products/mysql/**",
+        "examples/mysql/**",
+        "website/docs/d/mysql_*",
+        "website/docs/r/mysql_*"
+      ]
+    },
     "uaccount": {
       "github_users": [
         "Ali1213"
