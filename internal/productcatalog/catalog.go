@@ -11,6 +11,7 @@ import (
 	"github.com/terraform-providers/terraform-provider-ucloud/products/ipsecvpn"
 	"github.com/terraform-providers/terraform-provider-ucloud/products/label"
 	"github.com/terraform-providers/terraform-provider-ucloud/products/mysql"
+	"github.com/terraform-providers/terraform-provider-ucloud/products/sqlserver"
 	"github.com/terraform-providers/terraform-provider-ucloud/products/uaccount"
 	"github.com/terraform-providers/terraform-provider-ucloud/products/uads"
 	"github.com/terraform-providers/terraform-provider-ucloud/products/udb"
@@ -62,6 +63,7 @@ var definitions = []definition{
 	{name: "ipsecvpn", masterData: ProductMasterDataIdentity{EnSampleName: "IPSecVPN", Key: "ipsecvpn"}, newAdapter: ipsecvpn.New, terraformNamespaces: []string{"vpn"}, testBaseline: TestBaseline{AcceptanceTests: 9, ImportTests: 3}},
 	{name: "label", masterData: ProductMasterDataIdentity{EnSampleName: "Label", Key: "label"}, newAdapter: label.New, terraformNamespaces: []string{"label", "labels"}, testBaseline: TestBaseline{AcceptanceTests: 4}},
 	{name: "mysql", masterData: ProductMasterDataIdentity{EnSampleName: "MySQL", Key: "mysql"}, newAdapter: mysql.New, testBaseline: TestBaseline{AcceptanceTests: 5, ImportTests: 1}},
+	{name: "sqlserver", masterData: ProductMasterDataIdentity{EnSampleName: "SQLServer", Key: "sqlserver"}, newAdapter: sqlserver.New, testBaseline: TestBaseline{AcceptanceTests: 3, ImportTests: 1}},
 	{name: "uaccount", masterData: ProductMasterDataIdentity{EnSampleName: "UAccount", Key: "uaccount"}, newAdapter: uaccount.New, terraformNamespaces: []string{"projects", "zones"}, testBaseline: TestBaseline{AcceptanceTests: 2}},
 	{name: "uads", masterData: ProductMasterDataIdentity{EnSampleName: "UDDoS", Key: "uddos"}, newAdapter: uads.New, terraformNamespaces: []string{"anti_ddos"}, testBaseline: TestBaseline{AcceptanceTests: 2, ImportTests: 1}},
 	{name: "udb", masterData: ProductMasterDataIdentity{EnSampleName: "UDB", Key: "udb"}, newAdapter: udb.New, terraformNamespaces: []string{"db"}, testBaseline: TestBaseline{AcceptanceTests: 11, ImportTests: 1}},
